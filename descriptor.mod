@@ -5,5 +5,8 @@ tags={
 	"Events"
 	"Translation"
 }
+dependencies={
+    "Kaiserreich"
+}
 name="Kaiserreich: Brazil Expanded"
 supported_version="1.15.2"

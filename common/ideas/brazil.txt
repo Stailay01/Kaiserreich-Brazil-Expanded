@@ -1,0 +1,75 @@
+ideas = {
+
+	##############
+	# Country ideas
+	##############
+
+	country = {
+
+		BRA_brazilian_youth = {
+			name = BRA_youth_group_idea
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_brazilian_youth" }
+			picture = army_cooperation
+			allowed = { always = no }
+			available = {
+				has_government = national_populist
+				has_government = totalist
+			}
+			modifier = {
+			conscription = 0.015
+			training_time_factor = -0.2
+			war_support_factor = 0.1
+			}
+		}
+		BRA_guns2 = {
+			name = BRA_guns
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_guns" }
+			picture = generic_syndicalist_militia
+			allowed = { always = no }
+			available = {
+				has_government = syndicalist
+				has_government = totalist
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		BRA_people_militias2 = {
+			name = BRA_people_militias
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_people_militias" }
+			picture = generic_syndicalist_militia
+			allowed = { always = no }
+			available = {
+				has_government = syndicalist
+				has_government = totalist
+			}
+			modifier = {
+				unit_limit_bonus = 200
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+		BRA_women_homefront2 = {
+			name = BRA_women_homefront
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_women_homefront" }
+			picture = UoB_women_soldiers
+			allowed = { always = no }
+			available = {
+				has_government = syndicalist
+				has_government = totalist
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}
+}

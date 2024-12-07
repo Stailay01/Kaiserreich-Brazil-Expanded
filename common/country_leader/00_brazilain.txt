@@ -1,0 +1,88 @@
+#####################
+# Head of State traits
+#####################
+
+leader_traits = {
+	BRA_parliament_sic = {
+		name = KR_parliament_sic
+		sprite = 13
+		random = no
+		political_power_factor = 0.2
+		research_speed_factor = 0.08
+	}
+	BRA_brazilian_bismarck = {
+		random = no
+		stability_factor = 0.05
+		political_power_gain = 0.1
+		justify_war_goal_time = -0.33
+		opinion_gain_monthly_same_ideology_factor = 1
+		national_populist_drift = 0.05
+	}
+	BRA_lord_of_war = {
+		random = no
+		weekly_manpower = 500
+		ai_focus_aggressive_factor = 0.5
+		war_support_factor = 0.1
+		breakthrough_factor = 0.075
+	}
+	BRA_emperor_nationalist = {
+		random = no
+		political_power_gain = 0.05
+		army_core_attack_factor = 0.075
+		army_core_defence_factor = 0.075
+	}
+	BRA_first_maximalist = {
+		random = no
+		research_speed_factor = 0.05
+		totalist_drift = 0.025
+	}
+	BRA_cult_of_personality = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		political_power_factor = 0.05
+		grant_medal_cost_factor = -0.5
+		political_advisor_cost_factor = -0.25
+	}
+	BRA_president_enginer = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		production_speed_infrastructure_factor = 0.1
+		production_speed_air_base_factor = 0.1
+		production_speed_rail_way_factor = 0.15
+		production_speed_supply_node_factor = 0.15
+		production_speed_industrial_complex_factor = 0.05
+	}
+	BRA_popular_commandant = {
+		random = no
+		war_support_factor = 0.075
+		grant_medal_cost_factor = -0.75
+		promote_cost_factor = -0.33
+		command_power_gain = 0.075
+		army_morale_factor = 0.05
+	}
+	BRA_tententists = {
+		random = no
+		experience_gain_army = 0.05
+		high_command_cost_factor = -0.1
+		experience_gain_army_factor = 0.1
+		army_chief_cost_factor = -0.1
+		air_chief_cost_factor = -0.1
+		navy_chief_cost_factor = -0.1
+	}
+	BRA_rural_urban_revolucionary = {
+		random = no
+		political_power_gain = 0.05
+		army_infantry_attack_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		consumer_goods_factor = 0.025
+		conversion_cost_mil_to_civ_factor = -0.10
+	}
+	BRA_ultramilitarist = {
+		conscription_factor = 0.30
+		army_org_factor = 0.05
+		production_speed_arms_factory_factor = 0.15
+		paternal_autocrat_drift = 0.02
+	}
+}
