@@ -654,7 +654,7 @@ shared_focus = {
 	x = 3
 	y = 1
 
-	prerequisite = { focus = BRA_united_brazilian_army }
+	prerequisite = { focus = BRA_united_brazilian_army focus = BRA_build_new_arsenals_1 }
 	available = {
 		has_socialist_government = no
 		has_dictatorship_government = no
@@ -678,6 +678,82 @@ shared_focus = {
 
 	ai_will_do = { factor = 50 }
 	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_valid_state_for_development = yes
+				free_building_slots = { building = infrastructure size > 0 }
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+				type = industrial_complex
+				level = 10
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_valid_state_for_development = yes
+				free_building_slots = { building = infrastructure size > 0 }
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+				type = industrial_complex
+				level = 10
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_valid_state_for_development = yes
+				free_building_slots = { building = infrastructure size > 0 }
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+				type = industrial_complex
+				level = 10
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_valid_state_for_development = yes
+				free_building_slots = { building = infrastructure size > 0 }
+				free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+			}
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+				type = industrial_complex
+				level = 10
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
 		log = "[GetDateText]: [Root.GetName]: Focus BRA_military_equipment_effort"
 		add_tech_bonus = {
 			name = BRA_military_equipment_effort
@@ -694,7 +770,33 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
+shared_focus = {
+	id = BRA_build_new_arsenals_1
+	text = BRA_build_new_arsenals
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 6
 
+	relative_position_id = BRA_military_equipment_effort
+	x = -1
+	y = 1
+
+	prerequisite = { focus = BRA_military_equipment_effort }
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_build_new_arsenals"
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
 shared_focus = {
 	id = BRA_needs_of_war
 	icon = GFX_goal_generic_improve_industry
@@ -760,6 +862,20 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BRA_build_new_arsenals"
 		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -776,6 +892,36 @@ shared_focus = {
 	prerequisite = { focus = BRA_needs_of_war }
 	ai_will_do = { factor = 50 }
 	completion_reward = {
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
 		log = "[GetDateText]: [Root.GetName]: Focus BRA_more_arsneal"
 		random_owned_controlled_state = {
 			limit = {
@@ -811,6 +957,14 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BRA_military_engineering_advancements"
 		add_research_slot_until_five = yes
+		random_owned_controlled_state = {
+			prioritize = { 501 }
+			limit = {
+				is_core_of = ROOT
+				can_construct_building = nuclear_facility
+			}
+			construct_building_in_random_province = { nuclear_facility = 1 }
+		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -1167,6 +1321,14 @@ shared_focus = {
 	prerequisite = { focus = BRA_lessons_civil_war }
 	ai_will_do = { factor = 6 }
 	completion_reward = {
+		random_owned_controlled_state = {
+			prioritize = { 501 }
+			limit = {
+				is_core_of = ROOT
+				can_construct_building = air_facility
+			}
+			construct_building_in_random_province = { air_facility = 1 }
+		}
 		log = "[GetDateText]: [Root.GetName]: Focus BRA_aerodrome_construction"
 		add_ideas = BRA_extended_range
 		random_owned_controlled_state = {
@@ -1604,6 +1766,14 @@ shared_focus = {
 	}
 	ai_will_do = { factor = 1 }
 	completion_reward = {
+		random_owned_controlled_state = {
+			prioritize = { 501 }
+			limit = {
+				is_core_of = ROOT
+				can_construct_building = naval_facility
+			}
+			construct_building_in_random_province = { naval_facility = 1 }
+		}
 		log = "[GetDateText]: [Root.GetName]: Focus BRA_naval_buildup"
 		custom_effect_tooltip = BRA_port_tooltip
 		effect_tooltip = { add_ideas = BRA_upgraded_ports }
@@ -6189,6 +6359,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRA_union_political_framework"
 			add_ideas = BRA_cs_union
+			remove_trait = {
+				character = BRA_congresso_nacional
+				slot = second_in_command
+				trait = KR_parliament_sic
+			}
+			add_trait = {
+				character = BRA_congresso_nacional
+				slot = second_in_command
+				trait = BRA_parliament_sic
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -6573,7 +6753,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRA_female_pioneers"
 			air_experience = 40
 			add_war_support = 0.05
-			set_rule = { can_generate_female_aces = yes }
+			set_rule = { 
+			can_generate_female_aces = yes 
+			can_generate_female_unit_leaders = yes
+		}
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_AIRFORCE_BONUS }
 	}
@@ -6812,6 +6995,7 @@ focus_tree = {
 				ideology = totalist popularity = 0.1
 			}
 			remove_ideas = BRA_decentralisation
+			activate_advisor = BRA_leoncio_basbaum
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -7188,6 +7372,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRA_cult_of_personality"
 			add_stability = 0.05
+			add_country_leader_trait = BRA_cult_of_personality
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -7259,6 +7444,51 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
+	focus = {
+		id = BRA_follow_path_of_chen_gongbo
+		icon = GFX_goal_chi_chen_proletarian_legacy
+		cost = 8
+		mutually_exclusive = { focus = BRA_follow_path_marxism_leninism }
+		relative_position_id = BRA_totalitarian_propaganda_machine
+		x = -1
+		y = 1
+
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = BRA_clear_line_of_sucession }
+		prerequisite = { focus = BRA_totalitarian_propaganda_machine }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BRA_totalitarian_propaganda_machine"
+			add_ideas = BRA_chen_gongbo_path
+			hidden_effect = {
+				remove_trait = {
+					character = BRA_leoncio_basbaum
+					slot = second_in_command
+					trait = BRA_heir_of_nequete
+				}
+				add_trait = {
+					character = BRA_leoncio_basbaum
+					slot = second_in_command
+					trait = KR_dynamic_materialist_sic
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = BRA_abilio_de_nequete
+					slot = second_in_command
+					trait = BRA_cult_of_personality
+				}
+				add_trait = {
+					character = BRA_abilio_de_nequete
+					slot = second_in_command
+					trait = KR_dynamic_materialist_sic
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
 
 	focus = {
 		id = BRA_clear_line_of_sucession
@@ -7300,6 +7530,53 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRA_love_it_or_leave_it"
 			add_war_support = 0.4
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = BRA_follow_path_marxism_leninism
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		mutually_exclusive = { focus = BRA_follow_path_of_chen_gongbo }
+		cost = 8
+
+		relative_position_id = BRA_love_it_or_leave_it
+		x = 1
+		y = 1
+
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = BRA_love_it_or_leave_it }
+		prerequisite = { focus = BRA_clear_line_of_sucession }
+		ai_will_do = { factor = 20 }
+		completion_reward = {
+			add_ideas = BRA_marxism_leninism_path
+			log = "[GetDateText]: [Root.GetName]: Focus BRA_love_it_or_leave_it"
+			add_war_support = 0.4
+			hidden_effect = {
+				remove_trait = {
+					character = BRA_leoncio_basbaum
+					slot = second_in_command
+					trait = BRA_heir_of_nequete
+				}
+				add_trait = {
+					character = BRA_leoncio_basbaum
+					slot = second_in_command
+					trait = BRA_inheir_of_lenin
+				}
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = BRA_abilio_de_nequete
+					slot = second_in_command
+					trait = BRA_cult_of_personality
+				}
+				add_trait = {
+					character = BRA_abilio_de_nequete
+					slot = second_in_command
+					trait = BRA_inheir_of_lenin
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}

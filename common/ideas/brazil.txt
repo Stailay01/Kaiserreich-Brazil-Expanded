@@ -5,15 +5,42 @@ ideas = {
 	##############
 
 	country = {
-
+		BRA_marxism_leninism_path = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 		BRA_marxism_leninism_path" }
+			picture = SOV_soviet_hegemony
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				army_attack_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				conscription = 0.02
+				subjects_autonomy_gain = -0.15
+			}
+		}
+		BRA_chen_gongbo_path = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 		BRA_chen_gongbo_path" }
+			picture = CHI_high_popular_support
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				compliance_gain = 0.01
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				conscription_factor = 0.02
+				subjects_autonomy_gain = -0.15
+			}
+		}
 		BRA_brazilian_youth = {
 			name = BRA_youth_group_idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRA_brazilian_youth" }
 			picture = army_cooperation
 			allowed = { always = no }
 			available = {
-				has_government = national_populist
-				has_government = totalist
+				OR = {
+					has_government = national_populist
+					has_government = totalist
+				}
 			}
 			modifier = {
 			conscription = 0.015
@@ -27,8 +54,11 @@ ideas = {
 			picture = generic_syndicalist_militia
 			allowed = { always = no }
 			available = {
-				has_government = syndicalist
-				has_government = totalist
+				OR = {
+					has_government = syndicalist
+					has_government = totalist
+				}
+				
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -47,8 +77,10 @@ ideas = {
 			picture = generic_syndicalist_militia
 			allowed = { always = no }
 			available = {
-				has_government = syndicalist
-				has_government = totalist
+				OR = {
+					has_government = syndicalist
+					has_government = totalist
+				}
 			}
 			modifier = {
 				unit_limit_bonus = 200
@@ -63,8 +95,10 @@ ideas = {
 			picture = UoB_women_soldiers
 			allowed = { always = no }
 			available = {
-				has_government = syndicalist
-				has_government = totalist
+				OR = {
+					has_government = syndicalist
+					has_government = totalist
+				}
 			}
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05

@@ -15,11 +15,27 @@ characters = {
 			ideology = totalist_subtype
 			traits = {
 				BRA_first_maximalist
-				BRA_cult_of_personality
 			}
 		}
 	}
-
+	BRA_leoncio_basbaum = {
+		name="BRA_leoncio_basbaum"
+		portraits={
+			#army={
+			#	small="GFX_idea_generic_political_advisor_south_america_3"
+			#}
+			civilian={
+				small=GFX_portrait_BRA_leoncio_basbaum_small
+			}
+		}
+		advisor={
+			slot = second_in_command
+			idea_token = BRA_leoncio_basbaum
+			traits = { BRA_heir_of_nequete }
+			cost = 0
+			can_be_fired = no
+		}		
+	}
 	### Syndicalists ###
 	BRA_minervino_de_oliveira = {
 		name = BRA_minervino_de_oliveira
@@ -27,6 +43,15 @@ characters = {
 			civilian = {
 				large = GFX_portrait_BRA_minervino_de_oliveira_civilian_large
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BRA_minervino_de_oliveira
+			available = {
+				has_socialist_government = yes
+				is_country_leader = no
+			}
+			traits = { KR_public_works_administrator }
 		}
 		country_leader = {
 			desc = BRA_minervino_de_oliveira_leader_desc
@@ -63,7 +88,7 @@ characters = {
 			desc = BRA_luis_carlos_prestes_leader_desc
 			ideology = syndicalist_subtype
 			traits = {
-				BRA_popular_commandant
+				brazillian_lenin
 				BRA_tententists
 			}
 		}
@@ -74,16 +99,16 @@ characters = {
 				has_socialist_government = yes
 				is_country_leader = no
 			}
-			traits = { BRA_popular_commandant BRA_tententists }
+			traits = { brazillian_lenin BRA_tententists }
 		}
 		corps_commander = {
 			desc = BRA_luis_carlos_prestes_commander_desc
-			traits = { trait_reckless infantry_officer infantry_leader commando ambusher }
+			traits = { brilliant_strategist trait_reckless infantry_officer infantry_leader commando ambusher }
 			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
 		}
 	}
 	BRA_patricia_rehder_galvao = {
@@ -123,6 +148,15 @@ characters = {
 			civilian = {
 				large = GFX_portrait_BRA_pedro_ventura_felipe_de_araujo_pomar_civilian_large
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BRA_pedro_ventura_felipe_de_araujo_pomar
+			available = {
+				has_socialist_government = yes
+				is_country_leader = no
+			}
+			traits = { BRA_rural_urban_revolucionary }
 		}
 		country_leader = {
 			desc = BRA_pedro_ventura_felipe_de_araujo_pomar_leader_desc
@@ -218,6 +252,15 @@ characters = {
 			civilian = {
 				large = GFX_portrait_BRA_joao_amazonas_de_souza_pedroso_civilian_large
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BRA_joao_amazonas_de_souza_pedroso
+			available = {
+				has_socialist_government = yes
+				is_country_leader = no
+			}
+			traits = { KR_peoples_economist }
 		}
 		country_leader = {
 			desc = BRA_joao_amazonas_de_souza_pedroso_leader_desc
@@ -1193,7 +1236,7 @@ characters = {
 			available = {
 				has_government = national_populist
 			}
-			traits = { KR_spiritual_leader }
+			traits = { KR_spiritual_leader_sic }
 		}
 	}
 	BRA_alcebiades_delamare_nogueira_da_gama = {
@@ -1225,7 +1268,7 @@ characters = {
 			available = {
 				has_government = national_populist
 			}
-			traits = { KR_elder_aristocrat }
+			traits = { KUM_royal_advisory_sic }
 		}
 	}
 	BRA_luis_da_camara_cascudo = {
@@ -1241,7 +1284,7 @@ characters = {
 			available = {
 				has_government = national_populist
 			}
-			traits = { KR_regional_traditionalist_leader }
+			traits = { LEP_the_smiling_tiger }
 		}
 	}
 	BRA_marcos_vinicius_da_cruz_e_mello_moraes = {
@@ -1257,7 +1300,7 @@ characters = {
 			available = {
 				has_government = national_populist
 			}
-			traits = { KR_influential_intellectual }
+			traits = { BAT_jurist }
 		}
 	}
 
@@ -1587,10 +1630,23 @@ characters = {
 			logistics_skill = 2
 		}
 		advisor = {
+			slot = political_advisor
+			idea_token = BRA_isidoro_dias_lopes
+			available = {
+				has_socialist_government = yes
+				not_already_hired_except_as = high_command
+			}
+			traits = { BRA_popular_commandant BRA_tententists }
+		}
+		advisor = {
 			slot = high_command
 			idea_token = BRA_isidoro_dias_lopes
 			ledger = army
-			traits = { KR_MHC_entrenchment_1 }
+			available = {
+				has_socialist_government = yes
+				not_already_hired_except_as = political_advisor
+			}
+			traits = { KR_MHC_entrenchment_3 }
 			cost = 50
 		}
 	}
@@ -1835,7 +1891,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = BRA_bertoldo_ritter_klinger_commander_desc
-			traits = { brilliant_strategist politically_connected }
+			traits = { commando politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
